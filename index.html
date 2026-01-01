@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,238 +10,206 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(180deg, #0a1020, #0e162b);
-      color: #ffffff;
-      direction: ltr;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
-      padding: 40px 0;
     }
 
+    /* ===== HERO ===== */
     header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+      url("https://images.unsplash.com/photo-1581091870627-3f8c1c1d94a6") center/cover;
+      display: flex;
+      align-items: center;
       text-align: center;
-      margin-bottom: 60px;
+      color: #fff;
     }
 
     header h1 {
       font-size: 42px;
-      color: #4fc3f7;
       margin-bottom: 15px;
-      letter-spacing: 2px;
     }
 
     header p {
       font-size: 18px;
-      color: #cfd8dc;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.7;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 60px;
-    }
-
-    .card {
-      background: #0f1b34;
-      border-radius: 18px;
-      padding: 30px 25px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      font-size: 22px;
-      color: #4fc3f7;
-      margin-bottom: 15px;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #cfd8dc;
-      line-height: 1.7;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #2ecc71;
-      color: #ffffff;
-      padding: 12px 26px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #27ae60;
-    }
-
-    .cta {
-      text-align: center;
-      margin: 90px 0 70px;
-    }
-
-    .cta h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      font-size: 18px;
-      color: #cfd8dc;
       margin-bottom: 30px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 60px;
+    header a {
+      padding: 15px 35px;
+      background: #c9a14a;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
     }
 
-    footer h3 {
-      font-size: 26px;
-      letter-spacing: 2px;
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 80px 0;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
-    footer p {
-      font-size: 14px;
-      color: #b0bec5;
-      margin-bottom: 15px;
+    .services p {
+      color: #777;
+      margin-bottom: 50px;
     }
 
-    footer .links {
-      display: flex;
-      justify-content: center;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
-      margin-bottom: 15px;
     }
 
-    footer .links a {
-      color: #2ecc71;
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    /* ===== PROCESS ===== */
+    .process {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .process h2 {
+      font-size: 34px;
+      margin-bottom: 50px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .step {
+      padding: 30px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+    }
+
+    .step span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #c9a14a;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      padding: 70px 20px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 35px;
+      background: #c9a14a;
+      color: #000;
       text-decoration: none;
-      font-size: 15px;
+      border-radius: 30px;
+      font-weight: bold;
     }
 
-    footer span {
-      font-size: 13px;
-      color: #90a4ae;
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-
-    <header>
+  <!-- HERO -->
+  <header>
+    <div class="container">
       <h1>NEXA AURIX</h1>
-      <p>
-        We turn ideas into tangible results through professionalism,
-        commitment, and innovation.
-      </p>
-    </header>
+      <p>مقاولات وتشطيبات | جودة تنفيذ | التزام في التسليم</p>
+      <a href="https://wa.me/201234567890">تواصل معنا</a>
+    </div>
+  </header>
 
-    <section class="cards">
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <h2>خدماتنا</h2>
+      <p>نقدّم حلول متكاملة في المقاولات والتشطيبات</p>
 
-      <div class="card">
-        <div class="icon">🏠</div>
-        <h3>Contracting & Finishing</h3>
-        <p>
-          Integrated construction and finishing solutions delivered
-          with premium quality, precision, and commitment.
-        </p>
-        <a href="#" class="btn">Contact us on WhatsApp</a>
+      <div class="services-grid">
+        <div class="service-card">مقاولات عامة وتنفيذ متكامل</div>
+        <div class="service-card">تشطيبات داخلية سكني وتجاري</div>
+        <div class="service-card">جبس بورد وديكورات</div>
+        <div class="service-card">تشطيب نهائي وإضاءة</div>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>Digital Marketing</h3>
-        <p>
-          Professional marketing strategies that drive real growth
-          and measurable results.
-        </p>
-        <a href="#" class="btn">Contact us on WhatsApp</a>
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <h2>كيف نعمل</h2>
+
+      <div class="process-steps">
+        <div class="step">
+          <span>01</span>
+          <h3>معاينة</h3>
+          <p>فهم كامل للمشروع قبل التنفيذ</p>
+        </div>
+
+        <div class="step">
+          <span>02</span>
+          <h3>تنفيذ</h3>
+          <p>إدارة كاملة وجودة عالية</p>
+        </div>
+
+        <div class="step">
+          <span>03</span>
+          <h3>تسليم</h3>
+          <p>التزام بالوقت والمواصفات</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <div class="icon">🏢</div>
-        <h3>Real Estate Marketing</h3>
-        <p>
-          High-conversion real estate campaigns with strong market
-          positioning and branding.
-        </p>
-        <a href="#" class="btn">Contact us on WhatsApp</a>
-      </div>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>جاهزين نبدأ مشروعك؟</h2>
+    <p>تواصل معنا الآن</p>
+    <a href="https://wa.me/201234567890">واتساب مباشر</a>
+  </section>
 
-      <div class="card">
-        <div class="icon">🎨</div>
-        <h3>Interior & Exterior Design</h3>
-        <p>
-          Elegant, modern, and functional design solutions tailored
-          to your vision.
-        </p>
-        <a href="#" class="btn">Contact us on WhatsApp</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🛒</div>
-        <h3>E-Commerce Solutions</h3>
-        <p>
-          Complete strategies for building, launching, and scaling
-          successful online businesses.
-        </p>
-        <a href="#" class="btn">Contact us on WhatsApp</a>
-      </div>
-
-    </section>
-
-    <section class="cta">
-      <h2>Ready to Start Your Project?</h2>
-      <p>
-        Contact us today and let us turn your vision into reality
-        with professionalism and trust.
-      </p>
-      <a href="#" class="btn">Contact us on WhatsApp</a>
-    </section>
-
-    <footer>
-      <h3>NEXA AURIX</h3>
-      <p>We build trust… and deliver with excellence.</p>
-
-      <div class="links">
-        <a href="#">WhatsApp</a>
-        <a href="#">Email</a>
-      </div>
-
-      <span>© 2026 NEXA AURIX — All Rights Reserved</span>
-    </footer>
-
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 NEXA AURIX – All Rights Reserved
+  </footer>
 
 </body>
 </html>
